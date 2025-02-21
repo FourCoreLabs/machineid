@@ -5,7 +5,6 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"io"
-	"io/ioutil"
 	"os"
 	"os/exec"
 	"strings"
@@ -28,11 +27,11 @@ func protect(appID, id string) string {
 }
 
 func readFile(filename string) ([]byte, error) {
-	return ioutil.ReadFile(filename)
+	return os.ReadFile(filename)
 }
 
 func writeFile(filename string, data []byte) error {
-	return ioutil.WriteFile(filename, data, 0644)
+	return os.WriteFile(filename, data, 0644)
 }
 
 // readFirstFile tries all the pathnames listed and returns the contents of the first readable file.

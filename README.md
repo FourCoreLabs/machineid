@@ -4,12 +4,9 @@
 
 … because sometimes you just need to reliably identify your machines.
 
-[![GoDoc](https://godoc.org/github.com/denisbrodbeck/machineid?status.svg)](https://godoc.org/github.com/denisbrodbeck/machineid) [![Go Report Card](https://goreportcard.com/badge/github.com/denisbrodbeck/machineid)](https://goreportcard.com/report/github.com/denisbrodbeck/machineid)
-
 ## Fork
 
-[This](https://github.com/panta/machineid) is a fork of [github.com/denisbrodbeck/machineid](https://github.com/denisbrodbeck/machineid).
-The fork solve some issues in the original library (docker support and customizable machine-id file, macOS cron support, ...).
+[This](https://github.com/fourcorelabs/machineid) is a fork of [github.com/panta/machineid](https://github.com/panta/machineid).
 
 ## Main Features
 
@@ -23,13 +20,13 @@ The fork solve some issues in the original library (docker support and customiza
 Get the library with
 
 ```bash
-go get github.com/panta/machineid
+go get github.com/fourcorelabs/machineid
 ```
 
 You can also add the cli app directly to your `$GOPATH/bin` with
 
 ```bash
-go get github.com/panta/machineid/cmd/machineid
+go get github.com/fourcorelabs/machineid/cmd/machineid
 ```
 
 ## Usage
@@ -40,7 +37,7 @@ package main
 import (
   "fmt"
   "log"
-  "github.com/panta/machineid"
+  "github.com/fourcorelabs/machineid"
 )
 
 func main() {
@@ -60,7 +57,7 @@ package main
 import (
   "fmt"
   "log"
-  "github.com/panta/machineid"
+  "github.com/fourcorelabs/machineid"
 )
 
 func main() {
@@ -118,7 +115,7 @@ import (
   "crypto/hmac"
   "crypto/sha256"
   "fmt"
-  "github.com/panta/machineid"
+  "github.com/fourcorelabs/machineid"
 )
 
 const appKey = "WowSuchNiceApp"
