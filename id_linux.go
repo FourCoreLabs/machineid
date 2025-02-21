@@ -43,7 +43,7 @@ func machineID() (string, error) {
 	id, err := readFirstFile([]string{
 		dbusPath, dbusPathEtc, userMachineId,
 	})
-	if err != nil {
+	if err != nil || string(id) == "" {
 		id, err = readFile(linuxRandomUuid)
 		if err == nil {
 			writeFirstFile([]string{
